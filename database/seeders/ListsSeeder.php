@@ -15,13 +15,13 @@ class ListsSeeder extends Seeder
     public function run()
     {
       Lists::create([
-        "color_id" => 1,
+        "colors_id" => 1,
         "user_id" => 1,
         "name" => "Yaumi",
       ]);
 
       Lists::create([
-        "color_id" => 2,
+        "colors_id" => 2,
         "user_id" => 2,
         "name" => "PNJ",
       ]);

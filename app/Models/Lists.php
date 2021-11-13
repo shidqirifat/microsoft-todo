@@ -2,8 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Task;
+use App\Models\User;
+use App\Models\Colors;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Lists extends Model
 {
@@ -11,8 +14,18 @@ class Lists extends Model
 
   protected $guarded = [
     'id',
-    'color_id',
-    'user_id'
   ];
+
+  public function Task() {
+    return $this->hasMany(Task::class);
+  }
+
+  public function User() {
+    return $this->belongsTo(User::class);
+  }
+
+  public function Colors() {
+    return $this->belongsTo(Colors::class);
+  }
 
 }

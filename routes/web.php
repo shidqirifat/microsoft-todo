@@ -1,5 +1,10 @@
 <?php
 
+use App\Models\Colors;
+use App\Models\Lists;
+use App\Models\Subtask;
+use App\Models\Task;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +19,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  // dd(User::find(2)->list->first()->name);
+  // dd(Lists::find(2)->user->name);
+  // dd(Lists::find(1)->colors->name);
+  // dd(Colors::find(2)->lists->first()->name);
+  // dd(Lists::find(2)->task->first()->note);
+  // dd(Task::find(2)->lists->name);
+  // dd(User::find(2)->task->last()->name);
+  // dd(Task::find(3)->user->name);
+  // dd(Task::find(1)->subtask->last()->name);
+  // dd(Subtask::find(4)->task->name);
+  return view('welcome');
 });

@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Lists;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Colors extends Model
 {
@@ -12,4 +13,8 @@ class Colors extends Model
     protected $guarded = [
       'id'
     ];
+
+    public function Lists() {
+      return $this->hasMany(Lists::class);
+    }
 }
