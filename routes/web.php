@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Category;
 use App\Models\Colors;
 use App\Models\Lists;
 use App\Models\Subtask;
@@ -29,5 +30,9 @@ Route::get('/', function () {
   // dd(Task::find(3)->user->name);
   // dd(Task::find(1)->subtask->last()->name);
   // dd(Subtask::find(4)->task->name);
+
+  // Relasi dari CATEGORIES ke TASKS (dengan jembatan tabel TaskCategories)
+  // dd(Task::find(2)->taskcategory->first()->category->name);
+  // dd(Category::find(1)->taskcategory->last()->task->name);
   return view('welcome');
 });

@@ -2,14 +2,19 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\TaskCategory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Category extends Model
 {
-    use HasFactory;
+  use HasFactory;
 
-    protected $guarded = [
-      'id'
+  protected $guarded = [
+    'id'
   ];
+
+  public function TaskCategory() {
+    return $this->hasMany(TaskCategory::class);
+  }
 }
